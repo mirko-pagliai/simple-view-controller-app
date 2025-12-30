@@ -16,14 +16,30 @@ if (!defined('ROOT')) {
 require ROOT . '/vendor/autoload.php';
 
 const CONFIG = ROOT . DS . 'config';
+
 const TEMPLATES = ROOT . DS . 'templates';
 
-// Load `.env` file if it exists
+/*
+ * Environment bootstrap.
+ *
+ * To enable environment variables:
+ * 1. Copy `config/.env.example` to `config/.env`
+ * 2. Edit the `config/.env` file and set the desired values
+ *
+ * The `config/.env` file is optional and must not be committed.
+ * If present, it is loaded and all variables are exposed as strings.
+ *
+ * Example:
+ * ```
+ * DEBUG=true
+ * ```
+ *
+ * Type conversion is intentionally NOT handled here.
+ */
 $envFile = CONFIG . '/.env';
-
-if (is_file($envFile)) {
-    (new Loader($envFile))
-        ->parse()
+if (file_exists($envFile)) {
+    $loader = new Loader($envFile);
+    $loader->parse()
         ->putenv(true)
         ->toEnv(true);
 }

@@ -5,8 +5,14 @@ namespace App\Controller;
 
 use SimpleVC\Controller\Controller;
 
+/**
+ * Home controller.
+ */
 class HomeController extends Controller
 {
+    /**
+     * @return void
+     */
     public function index(): void
     {
         $this->set([
