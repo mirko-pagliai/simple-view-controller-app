@@ -1,15 +1,13 @@
 <?php
+declare(strict_types=1);
+
 /**
  * @var string $title
+ * @var string $text
  */
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <title><?= htmlspecialchars($title) ?></title>
-</head>
-<body>
+
 <h1><?= htmlspecialchars($title) ?></h1>
-</body>
-</html>
+<p>
+    <?= htmlspecialchars($text) ?>
+</p>

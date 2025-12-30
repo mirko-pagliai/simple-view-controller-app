@@ -11,6 +11,7 @@ class HomeController extends Controller
     {
         $this->set([
             'title' => 'Simple View Controller',
+            'text' => 'Welcome to Simple View Controller!',
         ]);
     }
 }
