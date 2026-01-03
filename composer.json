@@ -1,5 +1,6 @@
 {
   "name": "mirko-pagliai/simple-view-controller-app",
+  "description": "simple-view-controller",
   "license": "MIT",
   "type": "project",
   "authors": [
@@ -31,6 +32,5 @@
     "allow-plugins": {
       "dealerdirect/phpcodesniffer-composer-installer": true
     }
-  },
-  "minimum-stability": "dev"
+  }
 }
