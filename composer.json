@@ -11,7 +11,8 @@
   ],
   "require": {
     "php": "^8.3",
-    "mirko-pagliai/simple-view-controller": "dev-main"
+    "mirko-pagliai/simple-view-controller": "dev-main",
+    "symfony/console": "^7.4|^8.0"
   },
   "require-dev": {
     "cakephp/cakephp-codesniffer": "^5.3",
